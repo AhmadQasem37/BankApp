@@ -2,11 +2,18 @@
 
 namespace BankApp
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            // Your code here
+            AccountHolder holder = new AccountHolder("John Doe", 150);
+            BankAccount account = new BankAccount(200);
+
+            account.BalanceChanged += holder.OnBalanceChanged;
+            account.Deposit(holder, 100);
+            account.Withdraw(holder, 50);
         }
+
+
     }
 }

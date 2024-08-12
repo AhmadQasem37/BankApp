@@ -10,5 +10,9 @@ namespace BankApp
             this.Name = Name;
             this.Balance = Balance;
         }
+        public void OnBalanceChanged(string transactionName, AccountHolder holder, decimal oldBalance)
+        {
+            Console.WriteLine($" Hi {holder.Name},\n {transactionName} transaction is successful,\n  Old Balance: {oldBalance}, New Balance: {holder.Balance}");
+        }
     }
 }
