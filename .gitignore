@@ -1,0 +1,30 @@
+# Ignore the build output directories
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore NuGet package directory
+packages/
+
+# Ignore Rider and ReSharper files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Ignore files created by Visual Studio for Mac
+*.csproj.user
+*.csproj.user
+*.vs/
