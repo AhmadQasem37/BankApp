@@ -3,8 +3,21 @@ namespace BankApp
 {
     public class AccountHolder
     {
-        public string? Name { get; set; }
-        public decimal Balance { get; set; }
+        private string? name;
+        private decimal balance;
+
+        public string? Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public decimal Balance
+        {
+            get { return balance; }
+            set { balance = value; }
+        }
+
         public AccountHolder(string Name, decimal Balance)
         {
             this.Name = Name;
