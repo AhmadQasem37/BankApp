@@ -2,40 +2,50 @@ using System;
 using System.Text;
 namespace BankApp
 {
-    public delegate void BalanceChangedHandler(string transactionName, AccountHolder holder, decimal oldBalance);
+    public delegate void BalanceChangedHandler(string transactionName, BankAccount account, decimal oldBalance);
 
     public class BankAccount
     {
-    
-        private decimal threshold = 200m;
 
-        public BankAccount(decimal threshold)
+        private readonly decimal threshold = 200m;
+        private decimal balance;
+        private readonly string accountNumber;
+
+
+        public BankAccount(decimal threshold, decimal balance, string accountNumber)
         {
             this.threshold = threshold;
+            this.accountNumber = accountNumber;
+            this.balance = balance;
         }
 
-        public event BalanceChangedHandler BalanceChanged;
+        public event BalanceChangedHandler? BalanceChanged;
 
-        public void Deposit(AccountHolder holder, decimal amount)
+        public decimal Balance
+        {
+            get { return balance; }
+            set { balance = value; }
+        }
+        public void Deposit(AccountHolder holderInfo, decimal amount)
         {
 
-            var oldBalance = holder.Balance;
-            holder.Balance += amount;
-            BalanceChanged?.Invoke("Deposit", holder, oldBalance);
+            var oldBalance = Balance;
+            Balance += amount;
+            BalanceChanged?.Invoke("Deposit", this, oldBalance);
 
         }
 
-        public void Withdraw(AccountHolder holder, decimal amount)
+        public void Withdraw(AccountHolder holderInfo, decimal amount)
         {
 
-            var oldBalance = holder.Balance;
-            if (holder.Balance - amount < threshold)
+            var oldBalance = Balance;
+            if (Balance - amount < threshold)
             {
-                Console.WriteLine($"Hi {holder.Name}, Transaction canceled: Balance would fall below the threshold");
+                Console.WriteLine($"Hi {holderInfo.Name}, Transaction canceled: Balance would fall below the threshold");
                 return;
             }
-            holder.Balance -= amount;
-            BalanceChanged?.Invoke("Withdraw", holder, oldBalance);
+            this.balance -= amount;
+            BalanceChanged?.Invoke("Withdraw", this, oldBalance);
         }
 
     }
