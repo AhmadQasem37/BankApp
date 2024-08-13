@@ -7,7 +7,7 @@ namespace BankApp
     public class BankAccount
     {
     
-        private readonly decimal threshold = 200m;
+        private decimal threshold = 200m;
 
         public BankAccount(decimal threshold)
         {
