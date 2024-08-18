@@ -10,6 +10,7 @@ namespace BankApp
         private readonly decimal threshold = 200m;
         private decimal balance;
         private readonly string accountNumber;
+        private List<string> transactionHistory;
 
 
         public BankAccount(decimal threshold, decimal balance, string accountNumber)
@@ -17,6 +18,7 @@ namespace BankApp
             this.threshold = threshold;
             this.accountNumber = accountNumber;
             this.balance = balance;
+            this.transactionHistory = new List<string>();
         }
 
         public event BalanceChangedHandler? BalanceChanged;
@@ -26,11 +28,21 @@ namespace BankApp
             get { return balance; }
             set { balance = value; }
         }
+
+        public List<string> TransactionHistory
+        {
+            get { return transactionHistory; }
+        }
+
         public void Deposit(AccountHolder holderInfo, decimal amount)
         {
-
+            if (amount > 3000)
+            {
+                Console.WriteLine($"Hi {holderInfo.Name}, Transaction canceled: Please depose less than 3000");
+            }
             var oldBalance = Balance;
             Balance += amount;
+            transactionHistory.Add($"depose {amount} to account");
             BalanceChanged?.Invoke("Deposit", this, oldBalance);
 
         }
@@ -45,6 +57,7 @@ namespace BankApp
                 return;
             }
             this.balance -= amount;
+            transactionHistory.Add($"withdraw {amount} from account");
             BalanceChanged?.Invoke("Withdraw", this, oldBalance);
         }
 
