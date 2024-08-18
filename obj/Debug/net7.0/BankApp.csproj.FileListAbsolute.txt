@@ -3,7 +3,6 @@
 /Users/ahmadqasem/Desktop/BankApp/BankApp/bin/Debug/net7.0/BankApp.runtimeconfig.json
 /Users/ahmadqasem/Desktop/BankApp/BankApp/bin/Debug/net7.0/BankApp.dll
 /Users/ahmadqasem/Desktop/BankApp/BankApp/bin/Debug/net7.0/BankApp.pdb
-/Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.csproj.AssemblyReference.cache
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.GeneratedMSBuildEditorConfig.editorconfig
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.AssemblyInfoInputs.cache
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.AssemblyInfo.cs
@@ -13,3 +12,4 @@
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.pdb
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.genruntimeconfig.cache
 /Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/ref/BankApp.dll
+/Users/ahmadqasem/Desktop/BankApp/BankApp/obj/Debug/net7.0/BankApp.sourcelink.json
