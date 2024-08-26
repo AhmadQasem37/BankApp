@@ -8,24 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e9e470-3c95-422e-adc6-43a235f48589" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BankApp.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BankApp.generated/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountHolder.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BankAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankApp.generated.sln" beforeDir="false" afterPath="$PROJECT_DIR$/BankApp.generated.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/BankApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/BankApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/BankApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/BankApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/BankApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/BankApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/BankApp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/BankApp.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/BankApp.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/BankApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/BankApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/BankApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/BankApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -45,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;tasks/task-three&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "tasks/task-4-links",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/ahmadqasem/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/ahmadqasem/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/ahmadqasem/Library/Application Support/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/ahmadqasem/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/ahmadqasem/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/ahmadqasem/Library/Application Support/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="BankApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -96,6 +92,7 @@
       <workItem from="1723658276609" duration="1082000" />
       <workItem from="1724559212270" duration="71000" />
       <workItem from="1724559303575" duration="683000" />
+      <workItem from="1724571196476" duration="775000" />
     </task>
     <servers />
   </component>

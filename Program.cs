@@ -7,41 +7,75 @@ namespace BankApp
     {
         static void Main(string[] args)
         {
+            var customerJsonFile = "/Users/ahmadqasem/Desktop/BankApp/BankApp/JSON/Customer.json";
+            var accountJsonFile = "/Users/ahmadqasem/Desktop/BankApp/BankApp/JSON/AccountBank.json";
+            var transactionJsonFile = "/Users/ahmadqasem/Desktop/BankApp/BankApp/JSON/Transaction.json";
 
-            var jsonString = File.ReadAllText("/Users/ahmadqasem/Desktop/BankApp/BankApp/File_1.json");
-            var bankAccounts = JsonSerializer.Deserialize<List<BankAccount>>(jsonString);
 
-            var julyAccountsCount = bankAccounts.Count(e => e.CreationDate.Month == 7);
-            Console.WriteLine($"Number of accounts created in July: {julyAccountsCount}");
+            var customers = JsonSerializer.Deserialize<List<Customer>>(File.ReadAllText(customerJsonFile));
+            var accounts = JsonSerializer.Deserialize<List<BankAccount>>(File.ReadAllText(accountJsonFile));
+            var transactions = JsonSerializer.Deserialize<List<TransactionHistory>>(File.ReadAllText(transactionJsonFile));
 
-            var topThreeAccounts = bankAccounts.OrderBy(a => a.Balance).TakeLast(3);
-            Console.WriteLine("Top 3 customers with highest balances:");
-            foreach (var account in topThreeAccounts)
+
+            //Identify the number of accounts that were created during the month of July.
+            int monthNumber = 7;
+            var numberOfAccounts = accounts.Where(account => account.CreationDate.Month == monthNumber).Count();
+            Console.WriteLine($" Number of Acounts in month #{monthNumber}: {numberOfAccounts}");
+            Console.WriteLine("-----------------------------------------------------------");
+
+
+
+            //Display the name, email, and balance of the three customers with the highest balance in the bank.
+            var highestThreeCustomersBalance = customers
+            .Join(
+                accounts,
+                customer => customer.ID,
+                account => account.UserID,
+                (customer, account) => new { customer.FirstName, customer.LastName, customer.Email, account.Balance })
+            .OrderBy(c => c.Balance)
+            .TakeLast(3);
+
+            Console.WriteLine("Highest Three customers with highest balances in the Bank:");
+            foreach (var customer in highestThreeCustomersBalance)
             {
-                Console.WriteLine($"Name: {account.Name}, Balance: {account.Balance:C}");
+                Console.WriteLine($"Customer Name: {customer.FirstName} {customer.LastName},Customer Email: {customer.Email}, Balance: {customer.Balance}");
             }
-
-            var totalBalance = bankAccounts.Sum(a => a.Balance);
-            Console.WriteLine($"Total sum of all account balances: {totalBalance:C}");
+            Console.WriteLine("-----------------------------------------------------------");
 
 
 
-            var groupedAccounts = bankAccounts.GroupBy(a =>
-           {
-               if (a.Balance < 5000)
-                   return "Low Balance";
-               else if (a.Balance >= 5000 && a.Balance <= 10000)
-                   return "Medium Balance";
-               else
-                   return "High Balance";
-           });
+            //Calculate the total sum of all account balances in the bank
+            var totalBalance = accounts.Sum(account => account.Balance);
+            Console.WriteLine($" Total Sum of All Account Balance{totalBalance}");
+            Console.WriteLine("-----------------------------------------------------------");
 
-            Console.WriteLine("Accounts grouped by balance:");
-            foreach (var group in groupedAccounts)
+
+
+
+            //List the complete transaction history for the most active customer in the bank during the last month.
+            Console.WriteLine("-----------------------------------------------------------");
+
+
+
+
+            /*
+             Group accounts based on their balance as follows:
+             Balance < $5,000: "Low Balance"
+             Balance between $5,000 and $10,000: "Medium Balance"
+             Balance > $10,000: "High Balance"
+             */
+            var accountsGroup = accounts.GroupBy(account =>
             {
-                Console.WriteLine($"{group.Key}: {group.Count()} accounts");
+                if (account.Balance > 10000) return "high Balance";
+                else if (account.Balance > 5000) return "medium Balance";
+                else return "low Balance";
+            });
+            Console.WriteLine($" account grouped by balance");
+            foreach (var account in accountsGroup)
+            {
+                Console.WriteLine($"{account.Key} : {account.Count()}");
             }
-
+            Console.WriteLine("-----------------------------------------------------------");
         }
 
 
